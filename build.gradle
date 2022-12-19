@@ -6,14 +6,12 @@ plugins {
 group 'de.medieninformatik'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = '17'
-targetCompatibility = '17'
-
 ext {
-    junitVersion = '5.8.1'
-    xmlbindVersion = '3.0.1'
-    jaxbVersion = '3.0.2'
-    jacksonVersion = '2.13.0'
+    junitVersion = '5.9.0'
+    xmlbindVersion = '4.0.0'
+    jaxbVersion = '4.0.0'
+    jacksonVersion = '2.14.0'
+    javafakerVersion = '1.0.2'
 }
 
 run {
@@ -30,7 +28,6 @@ repositories {
 }
 
 application {
-    mainModule.set("${project.name}.main")
     mainClass.set("${group}.${project.name.toLowerCase()}.Main")
 }
 
@@ -48,12 +45,11 @@ dependencies {
 
     implementation "jakarta.xml.bind:jakarta.xml.bind-api:${xmlbindVersion}"
     implementation "org.glassfish.jaxb:jaxb-runtime:${jaxbVersion}"
-    //implementation "org.glassfish.jaxb:jaxb-xjc:${jaxbVersion}"
-
-    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}";
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+    //noinspection VulnerableLibrariesLocal
+    implementation "com.github.javafaker:javafaker:${javafakerVersion}"
 }
 
 test {
     useJUnitPlatform()
 }
-
