@@ -11,6 +11,8 @@ import java.util.Objects;
  * Storage-Klasse zum Speichern von Bibliothek-Daten mittels einfacher Getter und Setter
  * und entsprechenden Annotationen für XML-Parsing
  * <p>
+ * Speichert eine Liste an {@link Book Büchern}
+ * <p>
  * Getter, Setter, {@link Object#equals(Object)} und {@link Object#hashCode()}
  * sind nicht extra kommentiert, da diese Methoden mittels des IntelliJ-Wizards automatisch erstellt wurden
  * und die Kommentare dazu zum großen Teil redundant ausfallen würden

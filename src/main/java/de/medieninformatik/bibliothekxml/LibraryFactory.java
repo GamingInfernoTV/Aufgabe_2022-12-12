@@ -13,8 +13,9 @@ import java.util.stream.Stream;
  * Utility-Klasse zum Erzeugen eine {@link Library} mit zufalls-generierten {@link Book Buch}-Daten;
  * zum Generieren wird die {@link Faker Java Faker} Bibliothek genutzt, erzeugt werden die Daten in deutscher Sprache
  * (soweit möglich)
+ *
+ * @author Malte Kasolowsky <code>m30114</code>
  */
-@SuppressWarnings("java:S109")
 public final class LibraryFactory {
     private static final Faker FAKER = new Faker(Locale.GERMAN);
 

@@ -21,7 +21,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Hauptklasse des Programms
+ * Hauptklasse des Programms;
+ * dient zum Marshalling und Unmarshalling von {@link Library}-Daten nach/von XML und JSON Dateien
  *
  * @author Malte Kasolowsky <code>m30114</code>
  */
@@ -64,9 +65,9 @@ public class Main {
                 LOGGER.warning("marshalling and unmarshalling failed");
             }
         } catch (UnmarshalException e) {
-            LOGGER.log(Level.SEVERE, "validation of marshalled xml file failed", e);
+            LOGGER.log(Level.SEVERE, "validation of xml file during unmarshalling failed", e);
         } catch (JAXBException | IOException | SAXException e) {
-            LOGGER.log(Level.SEVERE, "failure during marshalling and unmarshalling", e);
+            LOGGER.log(Level.SEVERE, "exception thrown during marshalling and unmarshalling", e);
         }
     }
 
